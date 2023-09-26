@@ -6,10 +6,24 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+let intervalId = null;
+
 function changeColor() {
-  setInterval(() => {
-    body.backgroundColor = getRandomHexColor();
-  }, 1000);
+  const newColor = getRandomHexColor();
+  body.style.backgroundColor = newColor;
 }
 
-btnStart.addEventListener('click', changeColor);
+btnStart.addEventListener('click', () => {
+  btnStart.disabled = true;
+  btnStop.disabled = false;
+  intervalId = setInterval(changeColor, 1000);
+});
+btnStop.addEventListener('click', () => {
+  if (intervalId === null) {
+    return;
+  }
+  clearInterval(intervalId);
+  btnStart.disabled = false;
+  btnStop.disabled = true;
+});
