@@ -16,6 +16,22 @@ img {
   display: block;
   max-width: 100%;
 }
+li {
+  list-style: none;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+}
+a {
+  text-decoration: none;
+  transition: color, ease, 250ms;
+}
+a:hover,
+a:focus {
+  color: rgba(0, 255, 0, 0.3);
+}
+/** -----Exercise 1 ----- */
+
 .exs-1-wrapper {
   display: flex;
   justify-content: center;
@@ -29,10 +45,97 @@ img {
   width: 200px;
   background-color: #212121;
   color: aliceblue;
-  border-radius: 20%;
+  border-radius: 5px;
 }
 .exs-1-btn-start:disabled,
 .exs-1-btn-stop:disabled {
   background-color: aliceblue;
   color: #212121;
+}
+
+/** -----Exercise 2 ----- */
+.exs-2-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 420px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.exs-2-btn {
+  border: 1px dotted grey;
+  width: 100px;
+  padding: 10px;
+  border-radius: 8%;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-color: transparent;
+  transition: background-color, ease-in-out, 250ms;
+}
+.exs-2-btn:focus,
+.exs-2-btn:hover {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.exs-2-btn:disabled:focus,
+.exs-2-btn:disabled:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.timer {
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 68px;
+}
+.value {
+  font-size: 40px;
+}
+.label {
+  font-family: 'Courier New', Courier, monospace;
+}
+#datetime-picker {
+  height: 45px;
+  font-size: 18px;
+  padding-left: 60px;
+}
+
+/** -----Exercise 3 ----- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 70px;
+}
+.exs-3-btn {
+  border: 1px dotted grey;
+  width: 200px;
+  padding: 10px;
+  border-radius: 8%;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-color: transparent;
+  transition: background-color, ease-in-out, 250ms;
+}
+.exs-3-btn:focus,
+.exs-3-btn:hover {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.exs-3-btn:disabled:focus,
+.exs-3-btn:disabled:hover {
+  background-color: rgba(255, 0, 0, 0.2);
 }
